@@ -1,16 +1,18 @@
 <?php
-    $first_number = $_GET["first_number"];
-    $second_number = $_GET["second_number"];
-    $solution = $first_number + $second_number;
+    $weight = $_GET["weight"];
+    $distance = $_GET["distance"];
+    $solution = ($weight / 20) + ($distance / 20);
+    $returnString = "Cost ($): " . $solution;
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your Answer Below</title>
+    <title>Ship Yo' Stuff</title>
 </head>
 <body>
-    <h1>Arithmetic in PHP is easy!</h1>
-    <p>The sum of <?php echo $first_number; ?> and <?php echo $second_number; ?> is: </p>
-    <p><?php echo $solution; ?></p>
+    <h1>Shipping Calculator</h1>
+    <p>Weight (kg): <?php echo $weight; ?></p>
+    <p>Distance (km): <?php echo $distance; ?></p>
+    <p><?php echo $returnString; ?></p>
 </body>
 </html>
